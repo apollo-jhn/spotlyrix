@@ -46,3 +46,15 @@ The scope is **mandatory** and must be in `kebab-case`. Recommended scopes inclu
 - `fix(player): resolve audio stutter on track change`
 - `chore(config): configure commitlint and husky git hooks`
 - `docs(readme): add installation guide for bun`
+
+# Pull Request & Issue Title Conventions
+
+All Pull Request titles and GitHub Issue titles MUST follow the exact same conventional naming convention:
+
+```text
+<type>(<scope>): <short summary in present tense>
+```
+
+- **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
+- **Scope**: Mandatory and in `kebab-case` (e.g. `lyrics`, `player`, `ui`, `api`, `auth`, `config`, `deps`).
+- **PR Title Validation**: Validated in CI via GitHub Actions (`lint-pr-title.yml`). PRs with non-conforming titles will fail CI checks.

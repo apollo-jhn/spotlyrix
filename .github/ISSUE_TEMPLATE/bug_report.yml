@@ -1,0 +1,48 @@
+name: Bug Report
+description: Report an issue or unexpected behavior in Spotlyrix
+title: "fix(<scope>): "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide a concise description of the bug. Make sure your title follows the convention: `fix(<scope>): <description>` (e.g. `fix(player): audio pauses unexpectedly`).
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: The component or feature area affected (e.g., player, ui, lyrics, auth, api).
+      placeholder: player
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context & Screenshots
+      description: Add any other context, browser/OS version, or screenshots about the problem here.

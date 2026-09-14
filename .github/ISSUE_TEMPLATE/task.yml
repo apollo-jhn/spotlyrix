@@ -1,0 +1,42 @@
+name: Task / Chore
+description: Track maintenance, refactoring, documentation, or tooling tasks
+title: "chore(<scope>): "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Track technical tasks or maintenance. Make sure your title follows the convention: `<type>(<scope>): <description>` (e.g. `chore(deps): update nextjs to latest`, `refactor(player): simplify audio context lifecycle`).
+  - type: dropdown
+    id: type
+    attributes:
+      label: Task Type
+      options:
+        - chore (Maintenance, dependencies, setup)
+        - refactor (Code restructure without behavioral changes)
+        - docs (Documentation only updates)
+        - test (Unit or integration tests)
+        - perf (Performance improvements)
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: The component or area affected (e.g., config, deps, player, ui, lyrics).
+      placeholder: config
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: What needs to be done and why?
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Acceptance Criteria / Checklist
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
